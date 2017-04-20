@@ -6,20 +6,21 @@ $(function() {
     return moment(timestamp).fromNow();
   });
   const template = Handlebars.compile(tweetTemplate);
-
   function handleError(error) {
     console.error(error);
   }
-
+//prepare the new array of tweet (by using map) and then append it at once to the DOM
   function renderTweets(tweets) {
-    $('#container').empty().append(tweets.map(template).reverse());
+    $('#container').empty().append(tweets.map((tweet) => template(tweet) ).reverse());
   }
 
   function loadTweets() {
     $.ajax({
       method: "GET",
       url: "/tweets"
-    }).then(renderTweets, handleError);
+    }).then(renderTweets (item) => { 
+      
+    }, handleError);
   }
 
   function canPostValidator() {
