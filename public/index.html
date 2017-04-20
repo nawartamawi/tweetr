@@ -17,6 +17,9 @@
     <!-- new tweet CSS -->
     <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
 
+    <!--  old tweets CSS -->
+    <link rel="stylesheet" href="/styles/tweets.css" type="text/css" />
+
     <!-- External JS -->
     <script  type="text/javascript" src="/vendor/jquery-2.2.3.min.js"></script>
     <!-- Composer counter --> 
@@ -31,6 +34,7 @@
     <nav id="nav-bar">
       <img class="logo" src="/images/bird.png" alt="Logo image of a bird">
       <span class="header">Tweeter</span>
+      <button class="compose"><span>Compose</span></button>
     </nav>
     
     <!-- Page-specific (main) content here -->
@@ -43,8 +47,8 @@
             <span class="counter">140</span>
          </form>
       </section>
-
+      <div id="container">
+      </div>
     </main>
-
   </body>
 </html>

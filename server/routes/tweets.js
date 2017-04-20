@@ -1,6 +1,6 @@
 "use strict";
 
-const userHelper    = require("../lib/util/user-helper")
+const userHelper    = require("../lib/util/user-helper");
 
 const express       = require('express');
 const tweetsRoutes  = express.Router();
@@ -20,6 +20,9 @@ module.exports = function(DataHelpers) {
   tweetsRoutes.post("/", function(req, res) {
     if (!req.body.text) {
       res.status(400).json({ error: 'invalid request: no data in POST body'});
+      return;
+    } else if (req.body.text.length > 140) {
+      res.status(400).json({ error: "your tweet is nice but it's too long"});
       return;
     }
 
