@@ -22,6 +22,7 @@
 
     <!-- External JS -->
     <script  type="text/javascript" src="/vendor/jquery-2.2.3.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/g/handlebarsjs@4.0.5,momentjs@2.18.1"></script>
     <!-- Composer counter --> 
     <script  type="text/javascript" src="/scripts/composer-char-counter.js"></script>
     <!-- App JS -->
@@ -50,5 +51,19 @@
       <div id="container">
       </div>
     </main>
+    <script type="text/handlebars" id="tweet-template">
+      <article class="tweet">
+        <header>
+          <div><img class="avatar" src="{{user.avatars.small}}"><img></div>
+          <div class="name">{{user.name}}</div>
+          <div class="username">{{user.handle}}</div>
+        </header>
+        <div class="tweet-text">{{content.text}}</div>
+        <footer>
+          <div class="time-stamp">{{time_ago created_at}}</div>
+          <div class="icons">icons</div>
+        </footer>
+      </article>
+    </script>
   </body>
 </html>
