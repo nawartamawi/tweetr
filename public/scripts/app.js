@@ -18,9 +18,7 @@ $(function() {
     $.ajax({
       method: "GET",
       url: "/tweets"
-    }).then(renderTweets (item) => { 
-      
-    }, handleError);
+    }).then(renderTweets, handleError);
   }
 
   function canPostValidator() {
@@ -51,8 +49,8 @@ $(function() {
     }
   });
   $( "#nav-bar .compose" ).click(function() {
-    $( ".new-tweet" ).slideToggle(()=>{
-      $( ".new-tweet form" ).focus();
+    $( ".new-tweet" ).slideToggle(function(){
+      $('textarea[name="text"]').focus();
     });
 
   });

@@ -19,7 +19,7 @@
 
     <!--  old tweets CSS -->
     <link rel="stylesheet" href="/styles/tweets.css" type="text/css" />
-
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css" />
     <!-- External JS -->
     <script  type="text/javascript" src="/vendor/jquery-2.2.3.min.js"></script>
     <script src="https://cdn.jsdelivr.net/g/handlebarsjs@4.0.5,momentjs@2.18.1"></script>
@@ -35,7 +35,7 @@
     <nav id="nav-bar">
       <img class="logo" src="/images/bird.png" alt="Logo image of a bird">
       <span class="header">Tweeter</span>
-      <button class="compose"><span>Compose</span></button>
+      <button class="compose"><span><i class="fa fa-pencil-square-o" aria-hidden="true"></i>Compose</span></button>
     </nav>
     
     <!-- Page-specific (main) content here -->
@@ -61,7 +61,11 @@
         <div class="tweet-text">{{content.text}}</div>
         <footer>
           <div class="time-stamp">{{time_ago created_at}}</div>
-          <div class="icons">icons</div>
+          <div class="icons">
+            <i class="fa fa-heart" aria-hidden="true"></i>
+            <i class="fa fa-retweet" aria-hidden="true"></i>
+            <i class="fa fa-flag" aria-hidden="true"></i>
+          </div>
         </footer>
       </article>
     </script>

@@ -21,7 +21,7 @@
 } 
 #nav-bar .compose {
   float: right;
-  width: 81px;
+  width: 114px;
   height: 47px;
   margin-top: 20px;
   border: 1px solid black;
@@ -35,5 +35,5 @@
 }
 #nav-bar button.compose:hover {
   /*float: right;*/
-  background-color: red;
+  background-color: white;
 }
