@@ -46,7 +46,10 @@ $(function() {
         method: "POST",
         data: $(this).serialize()
       }).then(loadTweets, handleError);
+    
     }
+    
+    $('textarea[name="text"]').val("");
   });
   $( "#nav-bar .compose" ).click(function() {
     $( ".new-tweet" ).slideToggle(function(){
